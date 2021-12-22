@@ -1,0 +1,131 @@
+/*Global Style*/
+body {
+    padding: 10px;
+}
+
+#back-arrow {
+    cursor: pointer;
+}
+
+#back-arrow:hover {
+    -webkit-filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, .7));
+    filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, .7));
+}
+
+.form-check-input
+{
+    cursor: pointer;
+}
+
+ul>li {
+    list-style: none;
+}
+
+/*Cart Style*/
+.container-cart {
+    display: grid;
+    grid-template-columns: 49.75% 0.5% 49.75%;
+}
+
+.container-cart>.container-item {
+    display: grid;
+    background-color: yellow;
+    grid-column: 1/2;
+    padding: 10px;
+    grid-template-rows: auto auto;
+    row-gap: 10px;
+}
+
+
+.container-cart>.container-item>.container-setting {
+    background-color: rgb(30, 255, 0);
+    display: grid;
+    grid-template-columns: 70% auto;
+}
+
+.container-cart>.container-item>.container-shops {
+    background-color: aqua;
+    padding: 10px;
+}
+
+.container-cart>.container-item>.container-setting>.container-title {
+    grid-column: 1/3;
+}
+
+.container-cart>.container-item>.container-setting>.container-sort {
+    background-color: rgb(255, 0, 200);
+    display: grid;
+    grid-template-columns: 30% 60% 10%;
+}
+
+.container-cart>.container-item>.container-shops>.shop {
+    background-color: aquamarine;
+    padding: 10px;
+}
+
+.container-cart > .container-item > .container-shops > .shop  > .items > .item {
+    background-color: rgb(242, 255, 127);
+    display: grid;
+    grid-template-columns: 10% 30% auto auto;
+    grid-template-rows: 30% 30% 30%;
+    padding: 10px;
+}
+
+.container-cart > .container-item > .container-shops > .shop  > .items > .item > .item-title
+{   
+    background-color:rgb(255, 169, 251);
+    grid-column: 3/4;
+}
+.container-cart > .container-item > .container-shops > .shop  > .items > .item > .item-delete
+{
+    margin-left: auto;
+    margin-right: 0;
+    background-color:rgb(255, 177, 177);
+    align-items: center;
+}
+.container-cart > .container-item > .container-shops > .shop  > .items > .item > .item-price
+{
+    grid-row: 2/3;
+    grid-column: 3/4;
+}
+.container-cart > .container-item > .container-shops > .shop  > .items > .item > .item-image
+{
+    grid-row: 1/4;
+    grid-column: 2/3;
+    margin-right: auto;
+    margin-left: auto;
+}
+.container-cart > .container-item > .container-shops > .shop  > .items > .item > .item-image img
+{
+    background-color:rgb(255, 194, 194);
+    width:50%;
+    height:auto;
+
+}
+.container-cart > .container-item > .container-shops > .shop  > .items > .item > .class-check-box 
+{
+    grid-row: 2/3;
+    grid-column:1/2;
+    margin-right: auto;
+    margin-left: auto;
+    align-items: center;
+}
+
+
+/*Checkout Detail Style*/
+.container-cart > .container-item-checkout {
+    background-color: red;
+    grid-column: 3/4;
+    padding: 50px;
+}
+
+.container-cart > .container-item-checkout > .container-item-checkout-detail
+{
+    position: fixed;
+    width:30%;
+    display: flex;
+    flex-direction: column;
+    background-color: royalblue;
+    border: 1px solid black;
+    padding:20px
+}
