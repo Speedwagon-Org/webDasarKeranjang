@@ -12,12 +12,11 @@ body {
     filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, .7));
 }
 
-.form-check-input
-{
+.form-check-input {
     cursor: pointer;
 }
 
-ul > li {
+ul>li {
     list-style: none;
 }
 
@@ -63,7 +62,7 @@ ul > li {
     padding: 10px;
 }
 
-.container-cart > .container-item > .container-shops > .shop  > .items > .item {
+.container-cart>.container-item>.container-shops>.shop>.items>.item {
     background-color: rgb(242, 255, 127);
     display: grid;
     grid-template-columns: 10% 30% auto auto;
@@ -71,41 +70,43 @@ ul > li {
     padding: 10px;
 }
 
-.container-cart > .container-item > .container-shops > .shop  > .items > .item > .item-title
-{   
-    background-color:rgb(255, 169, 251);
+.container-cart>.container-item>.container-shops>.shop>.items>.item>.item-title {
+    background-color: rgb(255, 169, 251);
     grid-column: 3/4;
 }
-.container-cart > .container-item > .container-shops > .shop  > .items > .item > .item-delete
-{
+
+.container-cart>.container-item>.container-shops>.shop>.items>.item>.item-delete {
     margin-left: auto;
     margin-right: 0;
-    background-color:rgb(255, 177, 177);
+    background-color: rgb(255, 177, 177);
     align-items: center;
 }
-.container-cart > .container-item > .container-shops > .shop  > .items > .item > .item-price
-{
+
+.container-cart>.container-item>.container-shops>.shop>.items>.item>.item-price {
     grid-row: 2/3;
     grid-column: 3/4;
 }
-.container-cart > .container-item > .container-shops > .shop  > .items > .item > .item-image
-{
+
+.container-cart>.container-item>.container-shops>.shop>.items>.item>.item-image {
     grid-row: 1/4;
     grid-column: 2/3;
     margin-right: auto;
     margin-left: auto;
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
 }
-.container-cart > .container-item > .container-shops > .shop  > .items > .item > .item-image img
-{
-    background-color:rgb(255, 194, 194);
-    width:50%;
-    height:auto;
+
+.container-cart>.container-item>.container-shops>.shop>.items>.item>.item-image img {
+    background-color: rgb(255, 194, 194);
+    width: 75%;
+    height: auto;
 
 }
-.container-cart > .container-item > .container-shops > .shop  > .items > .item > .class-check-box 
-{
+
+.container-cart>.container-item>.container-shops>.shop>.items>.item>.class-check-box {
     grid-row: 2/3;
-    grid-column:1/2;
+    grid-column: 1/2;
     margin-right: auto;
     margin-left: auto;
     align-items: center;
@@ -113,19 +114,18 @@ ul > li {
 
 
 /*Checkout Detail Style*/
-.container-cart > .container-item-checkout {
+.container-cart>.container-item-checkout {
     background-color: red;
     grid-column: 3/4;
     padding: 50px;
 }
 
-.container-cart > .container-item-checkout > .container-item-checkout-detail
-{
+.container-cart>.container-item-checkout>.container-item-checkout-detail {
     position: fixed;
-    width:30%;
+    width: 30%;
     display: flex;
     flex-direction: column;
     background-color: royalblue;
     border: 1px solid black;
-    padding:20px
+    padding: 20px
 }
