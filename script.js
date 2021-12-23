@@ -1,36 +1,51 @@
-let itemPrices = [];
+let shops = []
+let count = 1
 let totalPrices = document.getElementById('total-price');
-for (let i = 1; i<=10;i++)
-{
-    itemPrices.push(Number(document.getElementById('item-price-'+String(i)).innerHTML));
+for (let i = 1; i <= 5; i++) {
+    shops.push({
+        shopName: document.getElementById('shop-name-' + String(i)).innerHTML,
+        shopCheck: document.getElementById('select-all-item-in-shop-' + String(i)),
+        shopItems: [],
+    });
+    for (let j = 1; j <= 2; j++) {
+        shops[i-1].shopItems.push({
+            itemName: document.getElementById('item-title-' + String(count)).innerHTML,
+            price: Number(document.getElementById('item-price-' + String(count)).innerHTML),
+            itemChecked: document.getElementById('item-' + String(count) + '-check'),
+            itemDeleted: false
+        });
+        count += 1;
+    }
 }
 
-function sum (listNumber)
+function selectItem(selectedItem = "Other") // Memilih Item
 {
     let total = 0;
-    for (let i = 0; i < listNumber.length; i++)
-    {
-        total += listNumber[i];
-    }
-    console.log(total)
-    return total;
-}
-function selectItem(selectedItem)
-{
-    let allItemInAllShop = document.getElementById('All-Item-In-All-Shop');
-    if (selectedItem == 'allItemInAllShop' && allItemInAllShop.checked == true)
-    {
-        totalPrices.innerHTML = String(sum(itemPrices));
-        
+    let SelectAll = document.getElementById('All-Item-In-All-Shop');
+    if (selectedItem == 'SelectAll' && SelectAll.checked == true) {
+        for (let i = 0; i < shops.length; i++) {
+            for (let j = 0; j < shops[i].shopItems.length; j++) {
+                if (shops[i].shopItems[j].itemDeleted == false){
+                    total += shops[i].shopItems[j].price;
+                    shops[i].shopItems[j].itemChecked.checked = true;
+                    console.log(shops[i].shopItems[j].itemName)
+                }
+            }
+            shops[i].shopCheck.checked = true;
+        }
     } 
-    else if (selectedItem == 'allItemInAllShop' && allItemInAllShop.checked == false)
-    {
-        totalPrices.innerHTML = String(0);
-    }
-    switch(selectItem)
-    {
-        
-    }
+    totalPrices.innerHTML = String(total);
+    changeButton()
 }
 
-
+function changeButton() // Fungsi Mengubah Tombol ketika Total Harga lebih dari 0
+{
+    let checkoutButton = document.getElementById('checkout-button');
+    if (Number(totalPrices.innerHTML) > 0) {
+        checkoutButton.classList.add('btn-primary')
+        checkoutButton.classList.remove('btn-secondary')
+    } else {
+        checkoutButton.classList.remove('btn-primary')
+        checkoutButton.classList.add('btn-secondary')
+    }
+}

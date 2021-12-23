@@ -52,19 +52,19 @@
             <div class="container-shops">
                 <div class="class-check-box">
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" onclick="selectItem('allItemInAllShop')"
+                        <input class="form-check-input" type="checkbox" onclick="selectItem('SelectAll')"
                             id="All-Item-In-All-Shop">
                         <label class="form-check-label" for="flexCheckDefault">
                             Select All
                         </label>
                     </div>
                 </div>
-                
+
                 <!--SHOP 1-->
                 <div class="shop">
                     <div class="class-check-box">
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" onclick="selectItem('allItemInShop1')"
+                            <input class="form-check-input" type="checkbox" onclick="selectItem()"
                                 id="select-all-item-in-shop-1">
                             <label class="form-check-label" for="flexCheckDefault">
                                 Select All
@@ -72,14 +72,14 @@
                         </div>
                     </div>
                     <div class="shop-name">
-                        <h4>SHOP 1</h4>
+                        <h4 id="shop-name-1">SHOP 1</h4>
                     </div>
                     <hr>
                     <div class="items">
                         <div class="item">
                             <div class="class-check-box item-check">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" onclick="selectItem('Item1')"
+                                    <input class="form-check-input" type="checkbox" onclick="selectItem()"
                                         id="item-1-check">
                                 </div>
                             </div>
@@ -88,7 +88,7 @@
                                     srcset="">
                             </div>
                             <div class="item-title">
-                                <h5>Item 1</h5>
+                                <h5 id="item-title-1">Item 1</h5>
                             </div>
                             <div class="item-delete" onclick="deleteItem(1)" style="cursor: pointer;">
                                 <img src="source/ico/cross.svg" alt="" srcset="">
@@ -100,7 +100,7 @@
                         <div class="item">
                             <div class="class-check-box item-check">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" onclick="selectItem('Item2')"
+                                    <input class="form-check-input" type="checkbox" onclick="selectItem()"
                                         id="item-2-check">
                                 </div>
                             </div>
@@ -109,7 +109,7 @@
                                     srcset="">
                             </div>
                             <div class="item-title">
-                                <h5>Item 2</h5>
+                                <h5 id="item-title-2">Item 2</h5>
                             </div>
                             <div class="item-delete" onclick="deleteItem(2)" style="cursor: pointer;">
                                 <img src="source/ico/cross.svg" alt="" srcset="">
@@ -125,7 +125,7 @@
                 <div class="shop">
                     <div class="class-check-box">
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" onclick="selectItem('allItemInShop2')"
+                            <input class="form-check-input" type="checkbox" onclick="selectItem()"
                                 id="select-all-item-in-shop-2">
                             <label class="form-check-label" for="flexCheckDefault">
                                 Select All
@@ -133,14 +133,14 @@
                         </div>
                     </div>
                     <div class="shop-name">
-                        <h4>SHOP 2</h4>
+                        <h4 id="shop-name-2">SHOP 2</h4>
                     </div>
                     <hr>
                     <div class="items">
                         <div class="item">
                             <div class="class-check-box item-check">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" onclick="selectItem('Item3')"
+                                    <input class="form-check-input" type="checkbox" onclick="selectItem()"
                                         id="item-3-check">
                                 </div>
                             </div>
@@ -149,7 +149,7 @@
                                     srcset="">
                             </div>
                             <div class="item-title">
-                                <h5>Item 3</h5>
+                                <h5 id="item-title-3">Item 3</h5>
                             </div>
                             <div class="item-delete" onclick="deleteItem(3)" style="cursor: pointer;">
                                 <img src="source/ico/cross.svg" alt="" srcset="">
@@ -161,7 +161,7 @@
                         <div class="item">
                             <div class="class-check-box item-check">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" onclick="selectItem('Item4')"
+                                    <input class="form-check-input" type="checkbox" onclick="selectItem()"
                                         id="item-4-check">
                                 </div>
                             </div>
@@ -170,7 +170,7 @@
                                     srcset="">
                             </div>
                             <div class="item-title">
-                                <h5>Item 4</h5>
+                                <h5 id="item-title-4">Item 4</h5>
                             </div>
                             <div class="item-delete" onclick="deleteItem(4)" style="cursor: pointer;">
                                 <img src="source/ico/cross.svg" alt="" srcset="">
@@ -186,7 +186,7 @@
                 <div class="shop">
                     <div class="class-check-box">
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" onclick="selectItem('allItemInShop3')"
+                            <input class="form-check-input" type="checkbox" onclick="selectItem()"
                                 id="select-all-item-in-shop-3">
                             <label class="form-check-label" for="flexCheckDefault">
                                 Select All
@@ -194,14 +194,14 @@
                         </div>
                     </div>
                     <div class="shop-name">
-                        <h4>SHOP 3</h4>
+                        <h4 id="shop-name-3">SHOP 3</h4>
                     </div>
                     <hr>
                     <div class="items">
                         <div class="item">
                             <div class="class-check-box item-check">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" onclick="selectItem('Item5')"
+                                    <input class="form-check-input" type="checkbox" onclick="selectItem()"
                                         id="item-5-check">
                                 </div>
                             </div>
@@ -210,7 +210,7 @@
                                     srcset="">
                             </div>
                             <div class="item-title">
-                                <h5>Item 5</h5>
+                                <h5 id="item-title-5">Item 5</h5>
                             </div>
                             <div class="item-delete" onclick="deleteItem(5)" style="cursor: pointer;">
                                 <img src="source/ico/cross.svg" alt="" srcset="">
@@ -222,7 +222,7 @@
                         <div class="item">
                             <div class="class-check-box item-check">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" onclick="selectItem('Item6')"
+                                    <input class="form-check-input" type="checkbox" onclick="selectItem()"
                                         id="item-6-check">
                                 </div>
                             </div>
@@ -231,7 +231,7 @@
                                     srcset="">
                             </div>
                             <div class="item-title">
-                                <h5>Item 6</h5>
+                                <h5 id="item-title-6">Item 6</h5>
                             </div>
                             <div class="item-delete" onclick="deleteItem(6)" style="cursor: pointer;">
                                 <img src="source/ico/cross.svg" alt="" srcset="">
@@ -247,7 +247,7 @@
                 <div class="shop">
                     <div class="class-check-box">
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" onclick="selectItem('allItemInShop4')"
+                            <input class="form-check-input" type="checkbox" onclick="selectItem()"
                                 id="select-all-item-in-shop-4">
                             <label class="form-check-label" for="flexCheckDefault">
                                 Select All
@@ -255,14 +255,14 @@
                         </div>
                     </div>
                     <div class="shop-name">
-                        <h4>SHOP 4</h4>
+                        <h4 id="shop-name-4">SHOP 4</h4>
                     </div>
                     <hr>
                     <div class="items">
                         <div class="item">
                             <div class="class-check-box item-check">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" onclick="selectItem('Item7')"
+                                    <input class="form-check-input" type="checkbox" onclick="selectItem()"
                                         id="item-7-check">
                                 </div>
                             </div>
@@ -271,7 +271,7 @@
                                     srcset="">
                             </div>
                             <div class="item-title">
-                                <h5>Item 7</h5>
+                                <h5 id="item-title-7">Item 7</h5>
                             </div>
                             <div class="item-delete" onclick="deleteItem(7)" style="cursor: pointer;">
                                 <img src="source/ico/cross.svg" alt="" srcset="">
@@ -283,7 +283,7 @@
                         <div class="item">
                             <div class="class-check-box item-check">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" onclick="selectItem('Item8')"
+                                    <input class="form-check-input" type="checkbox" onclick="selectItem()"
                                         id="item-8-check">
                                 </div>
                             </div>
@@ -292,7 +292,7 @@
                                     srcset="">
                             </div>
                             <div class="item-title">
-                                <h5>Item 8</h5>
+                                <h5 id="item-title-8">Item 8</h5>
                             </div>
                             <div class="item-delete" onclick="deleteItem(8)" style="cursor: pointer;">
                                 <img src="source/ico/cross.svg" alt="" srcset="">
@@ -308,7 +308,7 @@
                 <div class="shop">
                     <div class="class-check-box">
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" onclick="selectItem('allItemInShop5')"
+                            <input class="form-check-input" type="checkbox" onclick="selectItem()"
                                 id="select-all-item-in-shop-5">
                             <label class="form-check-label" for="flexCheckDefault">
                                 Select All
@@ -316,14 +316,14 @@
                         </div>
                     </div>
                     <div class="shop-name">
-                        <h4>SHOP 5</h4>
+                        <h4 id="shop-name-5">SHOP 5</h4>
                     </div>
                     <hr>
                     <div class="items">
                         <div class="item">
                             <div class="class-check-box item-check">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" onclick="selectItem('Item9')"
+                                    <input class="form-check-input" type="checkbox" onclick="selectItem()"
                                         id="item-9-check">
                                 </div>
                             </div>
@@ -332,7 +332,7 @@
                                     srcset="">
                             </div>
                             <div class="item-title">
-                                <h5>Item 9</h5>
+                                <h5 id="item-title-9">Item 9</h5>
                             </div>
                             <div class="item-delete" onclick="deleteItem(9)" style="cursor: pointer;">
                                 <img src="source/ico/cross.svg" alt="" srcset="">
@@ -344,7 +344,7 @@
                         <div class="item">
                             <div class="class-check-box item-check">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" onclick="selectItem('Item10')"
+                                    <input class="form-check-input" type="checkbox" onclick="selectItem()"
                                         id="item-10-check">
                                 </div>
                             </div>
@@ -353,7 +353,7 @@
                                     srcset="">
                             </div>
                             <div class="item-title">
-                                <h5>Item 10</h5>
+                                <h5 id="item-title-10">Item 10</h5>
                             </div>
                             <div class="item-delete" onclick="deleteItem(10)" style="cursor: pointer;">
                                 <img src="source/ico/cross.svg" alt="" srcset="">
@@ -385,11 +385,12 @@
                     <h5>Total Price is : Rp <span id="total-price">0</span>.00</h>
                 </div>
                 <div class="button">
-                    <button class="btn btn-secondary">CHECKOUT</button>
+                    <button class="btn btn-secondary" id="checkout-button">CHECKOUT</button>
                     <!--Change to btn btn-warning if any item selected-->
                 </div>
             </div>
         </div>
     </div>
     <script src="script.js"></script>
+
 </html>
