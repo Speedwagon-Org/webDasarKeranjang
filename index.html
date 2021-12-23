@@ -25,7 +25,7 @@
     </script>
 
     <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-arrow-left"
-        viewBox="0 0 16 16" id="back-arrow">
+        viewBox="0 0 16 16" id="back-arrow" onclick="restartPage()">
         <path fill-rule="evenodd"
             d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z" />
     </svg>
@@ -61,7 +61,7 @@
                 </div>
 
                 <!--SHOP 1-->
-                <div class="shop">
+                <div class="shop" id="shop-1">
                     <div class="class-check-box">
                         <div class="form-check">
                             <input class="form-check-input" type="checkbox" onclick="selectItem('Shops')"
@@ -76,7 +76,7 @@
                     </div>
                     <hr>
                     <div class="items">
-                        <div class="item">
+                        <div class="item" id="item-1">
                             <div class="class-check-box item-check">
                                 <div class="form-check">
                                     <input class="form-check-input" type="checkbox" onclick="selectItem()"
@@ -97,7 +97,7 @@
                                 <del>Rp 150000,00</del> <span id="item-price-1">100000</span>,00
                             </div>
                         </div>
-                        <div class="item">
+                        <div class="item" id="item-2">
                             <div class="class-check-box item-check">
                                 <div class="form-check">
                                     <input class="form-check-input" type="checkbox" onclick="selectItem()"
@@ -122,7 +122,7 @@
                 </div>
 
                 <!--SHOP 2-->
-                <div class="shop">
+                <div class="shop" id="shop-2">
                     <div class="class-check-box">
                         <div class="form-check">
                             <input class="form-check-input" type="checkbox" onclick="selectItem('Shops')"
@@ -137,7 +137,7 @@
                     </div>
                     <hr>
                     <div class="items">
-                        <div class="item">
+                        <div class="item" id="item-3">
                             <div class="class-check-box item-check">
                                 <div class="form-check">
                                     <input class="form-check-input" type="checkbox" onclick="selectItem()"
@@ -158,7 +158,7 @@
                                 <del>Rp 150000,00</del> <span id="item-price-3">100000</span>,00
                             </div>
                         </div>
-                        <div class="item">
+                        <div class="item" id="item-4">
                             <div class="class-check-box item-check">
                                 <div class="form-check">
                                     <input class="form-check-input" type="checkbox" onclick="selectItem()"
@@ -183,7 +183,7 @@
                 </div>
 
                 <!--SHOP 3-->
-                <div class="shop">
+                <div class="shop" id="shop-3">
                     <div class="class-check-box">
                         <div class="form-check">
                             <input class="form-check-input" type="checkbox" onclick="selectItem('Shops')"
@@ -198,7 +198,7 @@
                     </div>
                     <hr>
                     <div class="items">
-                        <div class="item">
+                        <div class="item" id="item-5">
                             <div class="class-check-box item-check">
                                 <div class="form-check">
                                     <input class="form-check-input" type="checkbox" onclick="selectItem()"
@@ -219,7 +219,7 @@
                                 <del>Rp 150000,00</del> <span id="item-price-5">100000</span>,00
                             </div>
                         </div>
-                        <div class="item">
+                        <div class="item" id="item-6">
                             <div class="class-check-box item-check">
                                 <div class="form-check">
                                     <input class="form-check-input" type="checkbox" onclick="selectItem()"
@@ -244,7 +244,7 @@
                 </div>
 
                 <!--SHOP 4-->
-                <div class="shop">
+                <div class="shop" id="shop-4">
                     <div class="class-check-box">
                         <div class="form-check">
                             <input class="form-check-input" type="checkbox" onclick="selectItem('Shops')"
@@ -259,7 +259,7 @@
                     </div>
                     <hr>
                     <div class="items">
-                        <div class="item">
+                        <div class="item" id="item-7">
                             <div class="class-check-box item-check">
                                 <div class="form-check">
                                     <input class="form-check-input" type="checkbox" onclick="selectItem()"
@@ -280,7 +280,7 @@
                                 <del>Rp 150000,00</del> <span id="item-price-7">100000</span>,00
                             </div>
                         </div>
-                        <div class="item">
+                        <div class="item" id="item-8">
                             <div class="class-check-box item-check">
                                 <div class="form-check">
                                     <input class="form-check-input" type="checkbox" onclick="selectItem()"
@@ -305,7 +305,7 @@
                 </div>
 
                 <!--SHOP 5-->
-                <div class="shop">
+                <div class="shop" id="shop-5">
                     <div class="class-check-box">
                         <div class="form-check">
                             <input class="form-check-input" type="checkbox" onclick="selectItem('Shops')"
@@ -320,7 +320,7 @@
                     </div>
                     <hr>
                     <div class="items">
-                        <div class="item">
+                        <div class="item" id="item-9">
                             <div class="class-check-box item-check">
                                 <div class="form-check">
                                     <input class="form-check-input" type="checkbox" onclick="selectItem()"
@@ -341,7 +341,7 @@
                                 <del>Rp 150000,00</del> <span id="item-price-9">100000</span>,00
                             </div>
                         </div>
-                        <div class="item">
+                        <div class="item" id="item-10">
                             <div class="class-check-box item-check">
                                 <div class="form-check">
                                     <input class="form-check-input" type="checkbox" onclick="selectItem()"
@@ -385,7 +385,7 @@
                     <h5>Total Price is : Rp <span id="total-price">0</span>.00</h>
                 </div>
                 <div class="button">
-                    <button class="btn btn-secondary" id="checkout-button">CHECKOUT</button>
+                    <button class="btn btn-secondary" id="checkout-button" onclick="restartPage()">CHECKOUT</button>
                     <!--Change to btn btn-warning if any item selected-->
                 </div>
             </div>
