@@ -51,7 +51,7 @@ function deleteItem(itemDeleted = 0) {
     selectItem()
 }
 
-function selectItem(selectedItem = "Other") // Memilih Item
+function selectItem(selectedItem = "Other", selectedShop = "") // Memilih Item
 {
     let listItemSelected = document.getElementById('list-of-selected-item');
     listItemSelected.innerHTML = "";
@@ -76,20 +76,21 @@ function selectItem(selectedItem = "Other") // Memilih Item
         }
     } else if (selectedItem == 'Shops') {
         for (let i = 0; i < shops.length; i++) {
-            if (shops[i].shopCheck.checked == true && shops[i].shopAvailable == true) {
+            if (shops[i].shopName == selectedShop && shops[i].shopCheck.checked == true) {
                 for (let j = 0; j < shops[i].shopItems.length; j++) {
                     if (shops[i].shopItems[j].itemDeleted == false) {
                         shops[i].shopItems[j].itemChecked.checked = true;
                     }
                 }
-            } else if (shops[i].shopCheck.checked == false && shops[i].shopAvailable == true){
+                break;
+            } else if (shops[i].shopName == selectedShop && shops[i].shopCheck.checked == false){
                 for (let j = 0; j < shops[i].shopItems.length; j++) {
                     if (shops[i].shopItems[j].itemDeleted == false) {
                         shops[i].shopItems[j].itemChecked.checked = false;
                     }
                 }
+                break;
             }
-            break;
         }
     }
 
