@@ -1,6 +1,7 @@
 let shops = []
 let count = 1
 let totalPrices = document.getElementById('total-price');
+let totalInCart = document.getElementById('total-item-in-cart');
 for (let i = 1; i <= 5; i++) {
     shops.push({
         shopName: document.getElementById('shop-name-' + String(i)).innerHTML,
@@ -18,9 +19,8 @@ for (let i = 1; i <= 5; i++) {
             itemVisibility: document.getElementById('item-' + String(count)).style
         });
         count += 1;
+        totalInCart.innerHTML = String(Number(totalInCart.innerHTML) + 1)
     }
-
-    selectItem();
 }
 
 function deleteItem(itemDeleted = 0) {
@@ -47,6 +47,8 @@ function deleteItem(itemDeleted = 0) {
             shops[i].shopVisibility.display = 'none';
         }
     }
+    totalInCart.innerHTML = String(Number(totalInCart.innerHTML) - 1)
+    selectItem()
 }
 
 function selectItem(selectedItem = "Other") // Memilih Item
@@ -80,13 +82,14 @@ function selectItem(selectedItem = "Other") // Memilih Item
                         shops[i].shopItems[j].itemChecked.checked = true;
                     }
                 }
-            } else if (shops[i].shopCheck.checked == false && shops[i].shopAvailable == true) {
+            } else if (shops[i].shopCheck.checked == false && shops[i].shopAvailable == true){
                 for (let j = 0; j < shops[i].shopItems.length; j++) {
-                    if (shops[i].shopItems[j].itemDeleted == false && shops[i].shopItems[j].itemChecked.checked != true) {
+                    if (shops[i].shopItems[j].itemDeleted == false) {
                         shops[i].shopItems[j].itemChecked.checked = false;
                     }
                 }
             }
+            break;
         }
     }
 
@@ -95,6 +98,8 @@ function selectItem(selectedItem = "Other") // Memilih Item
         for (let j = 0; j < shops[i].shopItems.length; j++) {
             if (shops[i].shopItems[j].itemDeleted == false && shops[i].shopItems[j].itemChecked.checked == true) {
                 total += shops[i].shopItems[j].itemPrice;
+
+                // Create Detail Checkout List
                 let li = document.createElement('li');
                 li.appendChild(document.createTextNode(String(shops[i].shopItems[j].itemName) + " - " + String(shops[i].shopItems[j].itemPrice)));
                 listItemSelected.appendChild(li);
