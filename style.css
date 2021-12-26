@@ -36,13 +36,11 @@ ul>li {
 
 
 .container-cart>.container-item>.container-setting {
-    background-color: rgb(30, 255, 0);
     display: grid;
     grid-template-columns: 70% auto;
 }
 
 .container-cart>.container-item>.container-shops {
-    background-color: aqua;
     padding: 10px;
 }
 
@@ -65,7 +63,6 @@ ul>li {
 }
 
 .container-cart>.container-item>.container-shops>.shop>.items>.item {
-    background-color: rgb(242, 255, 127);
     display: grid;
     grid-template-columns: 10% 30% auto auto;
     grid-template-rows: 30% 30% 30%;
@@ -73,7 +70,6 @@ ul>li {
 }
 
 .container-cart>.container-item>.container-shops>.shop>.items>.item>.item-title {
-    background-color: rgb(255, 104, 247);
     grid-column: 3/4;
 }
 
