@@ -1,3 +1,4 @@
+// Initialazation
 let shops = []
 let count = 1
 let totalPrices = document.getElementById('total-price');
@@ -28,7 +29,9 @@ for (let i = 1; i <= 5; i++) {
 }
 
 localStorage.setItem('Store Cart', JSON.stringify(shops))
+selectItem()
 
+// Add, Edit, Decrese quantity button
 function addQuantity(item)
 {
     for (let i = 0; i < 5; i++) {
@@ -81,17 +84,14 @@ function changeQuantity(item)
     selectItem()
 }
 
+// Delete Item
 function deleteItem(itemDeleted = 0) {
     itemDeleted -= 1
     for (let i = 0; i < shops.length; i++) {
         for (let j = 0; j < shops[i].shopItems.length; j++) {
             if (shops[i].shopItems[j].itemID == itemDeleted) {
-                //shops[i].shopItems[j].itemDeleted = true;
                 shops[i].shopItems[j].itemVisibility.display = 'none';
-                //shops[i].shopItems[j].itemChecked.checked = false;
                 shops[i].shopItems.splice(j,1)
-                console.log(i, j)
-                //localStorage.setItem('Store Cart', JSON.stringify(shops))
             }
         }
     }
@@ -101,7 +101,6 @@ function deleteItem(itemDeleted = 0) {
             shops[i].shopVisibility.display = 'none';
             console.log('Shops of index ' + String(i) + ' has been deleted')
             shops.splice(i,1);
-            //localStorage.setItem('Store Cart', JSON.stringify(shops))
         }
     }
     totalInCart.innerHTML = String(Number(totalInCart.innerHTML) - 1)
@@ -109,6 +108,7 @@ function deleteItem(itemDeleted = 0) {
     selectItem()
 }
 
+// Check Cheked or Unchecked Item also Count Item that checked
 function selectItem(selectedItem = "Other", selectedShop = "") // Memilih Item
 {
     let listItemSelected = document.getElementById('list-of-selected-item');
@@ -160,18 +160,23 @@ function selectItem(selectedItem = "Other", selectedShop = "") // Memilih Item
 
                 // Create Detail Checkout List
                 let li = document.createElement('li');
-                li.appendChild(document.createTextNode(String(shops[i].shopItems[j].itemName) + " - " + String(shops[i].shopItems[j].itemPrice) + " x " + String(shops[i].shopItems[j].itemQuantity)));
+                li.appendChild(document.createTextNode(String(shops[i].shopItems[j].itemName).slice(0,20) + " - " + String(new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR' }).format(shops[i].shopItems[j].itemPrice)) + " x " + String(shops[i].shopItems[j].itemQuantity)));
                 listItemSelected.appendChild(li);
             }
         }
     }
-    totalPrices.innerHTML = String(total)
+    totalPrices.innerHTML = String(new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR' }).format(total))
     if (total > 0) {
         document.getElementById('checkout-button').classList.remove('btn-secondary');
         document.getElementById('checkout-button').classList.add('btn-primary');
     } else {
         document.getElementById('checkout-button').classList.remove('btn-primary');
         document.getElementById('checkout-button').classList.add('btn-secondary');
+    }
+
+    if (shops.length == 0)
+    {
+        document.getElementById('cart-empty').style.display = 'block';
     }
 }
 
