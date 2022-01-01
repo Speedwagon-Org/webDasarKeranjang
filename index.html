@@ -29,7 +29,6 @@
         <path fill-rule="evenodd"
             d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z" />
     </svg>
-
     <div class="container-cart">
         <div class="container-item">
             <div class="container-setting">
@@ -40,7 +39,7 @@
                     You have <span id="total-item-in-cart">0</span> items in cart
                 </div>
             </div>
-            <div class="container-shops">
+            <div class="container-shops" >
                 <div class="class-check-box">
                     <div class="form-check">
                         <input class="form-check-input" type="checkbox" onclick="selectItem('AllItem')"
@@ -50,7 +49,9 @@
                         </label>
                     </div>
                 </div>
-
+                <div class="no-item" style="display:none;" id="cart-empty">
+                    <img src="https://nanocbdone.com/checkout/images/empty-cart.png" alt="" srcset="">
+                </div>
                 <!--SHOP 1-->
                 <div class="shop" id="shop-1">
                     <div class="class-check-box">
@@ -590,7 +591,7 @@
                 </div>
                 <hr>
                 <div class="item-total-price">
-                    <h5>Total Price is : Rp <span id="total-price">0</span>.00</h>
+                    <h5>Total Price is : <span id="total-price">0</span></h>
                 </div>
                 <div class="button">
                     <button class="btn btn-secondary" id="checkout-button" onclick="restartPage()">CHECKOUT</button>
