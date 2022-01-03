@@ -43,6 +43,7 @@ function addQuantity(item)
             }
         }
     }
+    localStorage.setItem('Store Cart', JSON.stringify(shops))
     selectItem()
 }
 
@@ -60,6 +61,7 @@ function decQuantity(item)
             }
         }
     }
+    localStorage.setItem('Store Cart', JSON.stringify(shops))
     selectItem()
 }
 
@@ -72,15 +74,15 @@ function changeQuantity(item)
                 if (Number(document.getElementById('item-quantity-value-' + String(item)).value) > 1)
                 {
                     shops[i].shopItems[j].itemQuantity = Number(document.getElementById('item-quantity-value-' + String(item)).value)
-                }
-                else 
+                } else 
                 {
+                    document.getElementById('item-quantity-value-' + String(item)).value = 1
                     shops[i].shopItems[j].itemQuantity = 1
                 }
-                //console.log('Item on index ',i,j,'has been changed! to ',document.getElementById('item-quantity-value-' + String(item)).value)
             }
         }
     }
+    localStorage.setItem('Store Cart', JSON.stringify(shops))
     selectItem()
 }
 
@@ -109,7 +111,7 @@ function deleteItem(itemDeleted = 0) {
 }
 
 // Check Cheked or Unchecked Item also Count Item that checked
-function selectItem(selectedItem = "Other", selectedShop = "") // Memilih Item
+function selectItem(selectedItem = "Other", selectedShop = "")
 {
     let listItemSelected = document.getElementById('list-of-selected-item');
     listItemSelected.innerHTML = "";
