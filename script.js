@@ -152,6 +152,17 @@ function selectItem(selectedItem = "Other", selectedShop = "")
                 break;
             }
         }
+    } else 
+    {
+        for (let i = 0; i < shops.length; i++) {
+            for (let j = 0; j < shops[i].shopItems.length; j++)
+            {
+                if (shops[i].shopItems[j].itemChecked.checked == false) {
+                    document.getElementById('All-Item-In-All-Shop').checked = false
+                    shops[i].shopCheck.checked = false
+                }
+            }
+        }
     }
 
     // Count Any Checked or Uncheked Item in Cart
