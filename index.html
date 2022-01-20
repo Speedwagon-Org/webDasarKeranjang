@@ -590,12 +590,14 @@
                     </ul>
                 </div>
                 <hr>
+                <div class="checkout-coupon">
+                    <input type="text" name="coupon" id="checkout-coupon" placeholder="Got Any Coupon?" onchange = "selectItem()"> 
+                </div>
                 <div class="item-total-price">
                     <h5>Total Price is : <span id="total-price">0</span></h>
                 </div>
                 <div class="button">
                     <button class="btn btn-secondary" id="checkout-button" onclick="restartPage()">CHECKOUT</button>
-                    <!--Change to btn btn-warning if any item selected-->
                 </div>
             </div>
         </div>

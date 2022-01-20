@@ -3,7 +3,10 @@ let shops = []
 let count = 1
 let totalPrices = document.getElementById('total-price');
 let totalInCart = document.getElementById('total-item-in-cart');
-
+let coupon = {
+    couponName : ['1212', 'FatuiBankAnniv'],
+    couponValue : [12/100, 90/100]
+}
 for (let i = 1; i <= 5; i++) {
     shops.push({
         shopID: i,
@@ -171,6 +174,14 @@ function selectItem(selectedItem = "Other", selectedShop = "")
             if (shops[i].shopItems[j].itemDeleted == false && shops[i].shopItems[j].itemChecked.checked == true) {
                 total += (shops[i].shopItems[j].itemPrice * shops[i].shopItems[j].itemQuantity);
 
+                // Coupon Handler
+                for(let i = 0; i < coupon.couponName.length; i++){
+                    if (coupon.couponName[i] == document.getElementById('checkout-coupon').value)
+                    {
+                        total = Number(total - (total * coupon.couponValue[i]))
+                        //document.getElementById('total-price-saved').value = `Congrats you've saved ${total * coupon.couponValue[i]}!`
+                    }
+                }
                 // Create Detail Checkout List
                 let li = document.createElement('li');
                 li.appendChild(document.createTextNode(String(shops[i].shopItems[j].itemName).slice(0,20) + " - " + String(new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR' }).format(shops[i].shopItems[j].itemPrice)) + " x " + String(shops[i].shopItems[j].itemQuantity)));
